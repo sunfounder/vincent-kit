@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.33 Ultraschallmodul &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.34 MPU6050-Modul" href="2.34_mpu6050_module.html" />
+    <link rel="prev" title="2.32 DHT11-Modul" href="2.32_dht11_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1_acommon_component.html">2.1 Gemeinsame Komponente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_led.html">2.2 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_rgb_led.html">2.3 RGB-LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_led_bar_graph.html">2.4 LED-Balkendiagramm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_7-segment_display.html">2.5 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_74hc595.html">2.6 74HC595</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_4-digital_7-segment_display.html">2.7 4-digitale 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_led_matrix_module.html">2.8 LED-Matrixmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_i2c_lcd1602_module.html">2.9 I2C LCD1602-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10_active_buzzer.html">2.10 Aktiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.11_passive_buzzer.html">2.11 Passiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.12_servo.html">2.12 Servo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.13_motor.html">2.13 Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.14_stepper_motor.html">2.14 Schrittmotor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.15_button.html">2.15 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.16_slide_switch.html">2.16 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.17_tilt_switch.html">2.17 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.18_touch_switch_module.html">2.18 Berührungsschaltermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.19_keypad.html">2.19 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.20_ir_receiver_module.html">2.20 IR-Empfängermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.21_relay_module.html">2.21 Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22_potentiometer.html">2.22 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.23_joystick_module.html">2.23 Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.24_mpr121_module.html">2.24 MPR121-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.25_rotary_encoder_module.html">2.25 Drehgebermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.26_photoresistor.html">2.26 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.27_thermistor.html">2.27 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.28_sound_sensor_module.html">2.28 Schallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.29_water_sensor_module.html">2.29 Wassersensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.30_ir_obstacle_avoidance_sensor.html">2.30 IR-Hindernisvermeidungssensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.31_pir_module.html">2.31 PIR-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.32_dht11_module.html">2.32 DHT11-Modul</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.33 Ultraschallmodul</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview"><strong>Überblick</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required"><strong>Erforderliche Komponenten</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-introduction"><strong>Komponenteneinführung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit"><strong>Fritzing Circuit</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram"><strong>Schematische Darstellung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code"><strong>Code</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-analysis"><strong>Code-Analyse</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture"><strong>Phänomen Bild</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.34_mpu6050_module.html">2.34 MPU6050-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.35_rfid-rc522_module.html">2.35 RFID-RC522-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_2_component.html">Teil 2: Komponente</a> &raquo;</li>
+        
+      <li>2.33 Ultraschallmodul</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.33_ultrasonic_module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="ultrasonic-module">
+<h1>2.33 Ultraschallmodul<a class="headerlink" href="#ultrasonic-module" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2><strong>Überblick</strong><a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion lernen Sie, wie Sie das Ultraschallmodul verwenden.</p>
+</section>
+<section id="components-required">
+<h2><strong>Erforderliche Komponenten</strong><a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/Part_two_33.png" src="_images/Part_two_33.png" />
+</section>
+<section id="component-introduction">
+<h2><strong>Komponenteneinführung</strong><a class="headerlink" href="#component-introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image244.png"><img alt="_images/image244.png" class="align-center" src="_images/image244.png" style="width: 300px;" /></a>
+<p>Das Ultraschall-Entfernungsmessmodul bietet eine berührungslose Messfunktion von 2 cm bis 400 cm. Das Arbeitsprinzip ist, dass beim Versenden von Befehlen durch die MPU der Keramikchip zu vibrieren beginnt und das Aluminiumgehäuse zusammen mit ihm vibriert, um eine Ultraschallwelle zu bilden und die Welle zur Rückseite des Autos zu senden. Nachdem die ausgesendete Ultraschallwelle ein Hindernis getroffen hat, tritt eine Echowelle auf. Diese Echowelle wird von demselben Aluminiumgehäuse und dem Keramikchip in Form von Vibrationen empfangen. Die MPU beurteilt die Position des Hindernisses durch Berechnung der Zeitdifferenz und der Azimutdifferenz der Echowelle. Ultraschall-Abstandssensoren können in großem Umfang bei der Überwachung des Materialstands (Flüssigkeitsstand), der Vermeidung von Roboterkollisionen, verschiedenen Ultraschall-Näherungsschaltern und Einbruchalarmen eingesetzt werden.</p>
+<p>Das Modul enthält Ultraschallsender, Empfänger und Steuerschaltung. Die Grundprinzipien sind wie folgt:</p>
+<p>1.Use an IO flip-flop to process a high level signal of at least 10us;</p>
+<p>2.The module automatically sends eight 40khz and detects if there is a
+pulse signal return.</p>
+<p>3.If the signal returns, passing the high level, the high output IO
+duration is the time from the transmission of the ultrasonic wave to the
+return of it. Here, test distance = (high time x sound speed (340 m / s)
+/ 2.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 48%" />
+<col style="width: 18%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>TRIG</strong></p></td>
+<td><p>Impulseingang auslösen</p></td>
+<td><p><strong>GND</strong></p></td>
+<td><p>Ground</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ECHO</strong></p></td>
+<td><p>Echoimpulsausgang</p></td>
+<td><p><strong>VCC</strong></p></td>
+<td><p>Liefern</p></td>
+</tr>
+</tbody>
+</table>
+<p>Das Zeitdiagramm ist unten dargestellt. Sie brauchen nur einen kurzen Impuls von 10us an den Triggereingang senden, um die Entfernungsmessung zu starten. Anschließend sendet das Modul einen 8-Perioden-Ultraschallimpuls mit einer Frequenz von 40 kHz und erhöht sein Echo. Sie können den Bereich über das Zeitintervall zwischen dem Senden des Triggersignals und dem Empfangen des Echosignals berechnen.</p>
+<p>Formel: us / 58 = Zentimeter oder us / 148 = Zoll; oder: der Bereich = hohe Pegelzeit * Geschwindigkeit (340 M / S) / 2; Es wird empfohlen, einen Messzyklus über 60 ms zu verwenden, um Signalkollisionen des Triggersignals und des Echosignals zu vermeiden.</p>
+<img alt="_images/image245.png" class="align-center" src="_images/image245.png" />
+</section>
+<section id="fritzing-circuit">
+<h2><strong>Fritzing Circuit</strong><a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Beispiel verbinden wir die Stifte des Ultraschallmoduls direkt mit den Stiften der Mega 2560-Platine. Und dann erhalten wir VCC des Ultraschallmoduls, das an 5 V angeschlossen ist, GND an GND, Trig an den digitalen Pin 5, Echo an den digitalen Pin 4.</p>
+<a class="reference internal image-reference" href="_images/image246.png"><img alt="_images/image246.png" class="align-center" src="_images/image246.png" style="width: 500px;" /></a>
+</section>
+<section id="schematic-diagram">
+<h2><strong>Schematische Darstellung</strong><a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image247.png"><img alt="_images/image247.png" class="align-center" src="_images/image247.png" style="width: 2.91667in; height: 2.27083in;" /></a>
+</section>
+<section id="code">
+<h2><strong>Code</strong><a class="headerlink" href="#code" title="Link zu dieser Überschrift">¶</a></h2>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/8254174a-93c8-4a72-a440-26f1ab63ca07/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><p>Nach dem Hochladen der Codes auf die Mega2560-Karte zeigt der serielle Monitor die Entfernung der Hindernisse an, die der Ultraschallsensor erkannt hat.</p>
+</section>
+<section id="code-analysis">
+<h2><strong>Code-Analyse</strong><a class="headerlink" href="#code-analysis" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Über die Anwendung des Ultraschallsensors können wir die Unterfunktion direkt überprüfen.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">float</span> <span class="nf">readSensorData</span><span class="p">(){</span><span class="c1">// ...}</span>
+</pre></div>
+</div>
+<p>PING wird durch einen HIGH-Impuls von 2 oder mehr Mikrosekunden ausgelöst. (Geben Sie vorher einen kurzen LOW-Impuls, um einen sauberen HIGH-Impuls zu gewährleisten.)</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span> <span class="kr">LOW</span><span class="p">);</span>
+<span class="nf">delayMicroseconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="nf">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span> <span class="kr">HIGH</span><span class="p">);</span>
+<span class="nf">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nf">digitalWrite</span><span class="p">(</span><span class="n">trigPin</span><span class="p">,</span> <span class="kr">LOW</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Der Echo-Pin wird zum Lesen des Signals von PING verwendet, einem HIGH-Impuls, dessen Dauer die Zeit (in Mikrosekunden) vom Senden des Pings bis zum Empfang des Echos des Objekts ist.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">microsecond</span><span class="o">=</span><span class="nf">pulseIn</span><span class="p">(</span><span class="n">echoPin</span><span class="p">,</span> <span class="kr">HIGH</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Die Schallgeschwindigkeit beträgt 340 m / s oder 29 Mikrosekunden pro Zentimeter.</p>
+<p>Dies gibt die vom Ping zurückgelegte Strecke an, ausgehend und zurück, also teilen wir durch 2, um die Entfernung des Hindernisses zu erhalten.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">microsecond</span> <span class="o">/</span> <span class="mf">29.00</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="phenomenon-picture">
+<h2><strong>Phänomen Bild</strong><a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image248.jpeg"><img alt="2.33" class="align-center" src="_images/image248.jpeg" style="width: 5.40833in; height: 3.93681in;" /></a>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.34_mpu6050_module.html" class="btn btn-neutral float-right" title="2.34 MPU6050-Modul" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.32_dht11_module.html" class="btn btn-neutral float-left" title="2.32 DHT11-Modul" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

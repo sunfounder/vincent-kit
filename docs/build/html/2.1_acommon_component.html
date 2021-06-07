@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1 Gemeinsame Komponente &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.2 LED" href="2.2_led.html" />
+    <link rel="prev" title="Teil 2: Komponente" href="part_2_component.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1 Gemeinsame Komponente</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Überblick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#breadboard">Steckbrett</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jumper-wires">Überbrückungsdrähte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resistor">Widerstand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#capacitor">Kondensator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transistor">Transistor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diode">Diode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prototype-shield">Prototyp Schild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_led.html">2.2 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_rgb_led.html">2.3 RGB-LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_led_bar_graph.html">2.4 LED-Balkendiagramm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_7-segment_display.html">2.5 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_74hc595.html">2.6 74HC595</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_4-digital_7-segment_display.html">2.7 4-digitale 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_led_matrix_module.html">2.8 LED-Matrixmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_i2c_lcd1602_module.html">2.9 I2C LCD1602-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10_active_buzzer.html">2.10 Aktiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.11_passive_buzzer.html">2.11 Passiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.12_servo.html">2.12 Servo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.13_motor.html">2.13 Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.14_stepper_motor.html">2.14 Schrittmotor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.15_button.html">2.15 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.16_slide_switch.html">2.16 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.17_tilt_switch.html">2.17 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.18_touch_switch_module.html">2.18 Berührungsschaltermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.19_keypad.html">2.19 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.20_ir_receiver_module.html">2.20 IR-Empfängermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.21_relay_module.html">2.21 Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22_potentiometer.html">2.22 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.23_joystick_module.html">2.23 Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.24_mpr121_module.html">2.24 MPR121-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.25_rotary_encoder_module.html">2.25 Drehgebermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.26_photoresistor.html">2.26 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.27_thermistor.html">2.27 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.28_sound_sensor_module.html">2.28 Schallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.29_water_sensor_module.html">2.29 Wassersensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.30_ir_obstacle_avoidance_sensor.html">2.30 IR-Hindernisvermeidungssensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.31_pir_module.html">2.31 PIR-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.32_dht11_module.html">2.32 DHT11-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.33_ultrasonic_module.html">2.33 Ultraschallmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.34_mpu6050_module.html">2.34 MPU6050-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.35_rfid-rc522_module.html">2.35 RFID-RC522-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_2_component.html">Teil 2: Komponente</a> &raquo;</li>
+        
+      <li>2.1 Gemeinsame Komponente</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.1_acommon_component.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="common-component">
+<h1>2.1 Gemeinsame Komponente<a class="headerlink" href="#common-component" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2>Überblick<a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion werden einige gängige Komponenten vorgestellt, darunter Steckbrett, Sprungdrähte, Widerstand, Kondensator, Transistor, Diode, Prototype Shield usw.</p>
+</section>
+<section id="breadboard">
+<h2>Steckbrett<a class="headerlink" href="#breadboard" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein Steckbrett ist eine Konstruktionsbasis für das Prototyping von Elektronik. Es kann verwendet werden, um Schaltungen schnell aufzubauen und zu testen, bevor ein Schaltungsdesign abgeschlossen wird. Und es hat viele Löcher zum Einsetzen von Komponenten wie den oben genannten ICs, Widerständen und Jumpern. Mit dem Steckbrett können Sie problemlos Komponenten einsetzen und entfernen. Wenn es also viele Änderungen geben wird oder wenn Sie nur schnell eine Schaltung erstellen möchten, ist dies viel schneller als das Löten Ihrer Schaltung. Daher wird es in vielen Experimenten häufig als Hub verwendet, um zwei oder mehr Geräte zu verbinden.</p>
+<img alt="_images/image29.png" src="_images/image29.png" />
+<p>Dies ist die interne Struktur eines Full + Breadboards. Obwohl das Steckbrett Löcher aufweist, <strong>sind einige von ihnen intern mit Metallstreifen verbunden</strong>. Diese Löcher dienen zum Einführen von Stiften von Geräten oder Drähten. An den langen Seiten befinden sich vier lange Metallstreifen. Die blauen und roten Linien sind nur zur klaren Beobachtung markiert. Sie können jedoch die blaue Linie als GND und die rote als VCC verwenden. Alle fünf Löcher in der Mitte sind vertikal mit den Metallauslösungen im Inneren verbunden, und die Metallauslösungen sind nicht miteinander verbunden. Sie können sie horizontal mit Drähten oder Komponenten verbinden. In der Mitte des Steckbretts befindet sich eine Nut für IC-Chips.</p>
+<img alt="_images/image57.jpeg" src="_images/image57.jpeg" />
+</section>
+<section id="jumper-wires">
+<h2>Überbrückungsdrähte<a class="headerlink" href="#jumper-wires" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Drähte, die zwei Klemmen verbinden, werden als Überbrückungsdrähte bezeichnet. Es gibt verschiedene Arten von Überbrückungsdrähten. Hier konzentrieren wir uns auf diejenigen, die in Steckbrettern verwendet werden. Sie werden unter anderem verwendet, um elektrische Signale von irgendwo auf dem Steckbrett an die Eingangs- / Ausgangspins des Mikrocontrollers zu übertragen.</p>
+<p>Durch Einsetzen des „Endverbinders“ des Jumpers in den im Steckbrett vorgesehenen Steckplatz kann der Jumper installiert werden. Unter der Oberfläche befinden sich mehrere Gruppen paralleler Platinen, die die Steckplätze je nach Bereich in Reihen oder Spalten verbinden. Der „Endverbinder“ kann in den spezifischen Steckplatz eingesetzt werden, der im spezifischen Prototyp des Steckbretts ohne Löten angeschlossen werden muss.</p>
+<p>Es gibt drei Arten von Überbrückungskabeln: Buchse zu Buchse, Stecker zu Stecker und Stecker zu Buchse. Der Grund, warum wir es von Mann zu Frau nennen, ist, dass es die herausragende Spitze an einem Ende sowie ein versenktes weibliches Ende hat. Mann-zu-Mann bedeutet, dass beide Seiten männlich sind, und Frau-zu-Frau bedeutet, dass beide Enden weiblich sind.</p>
+<img alt="_images/image414.png" src="_images/image414.png" />
+<p>In einem Projekt können mehrere Typen verwendet werden. <strong>Die Farbe der Sprungdrähte ist unterschiedlich, dies bedeutet jedoch nicht, dass ihre Funktion entsprechend unterschiedlich ist. Es wurde nur entwickelt, um die Verbindung zwischen den einzelnen Schaltkreisen besser zu identifizieren.</strong></p>
+</section>
+<section id="resistor">
+<h2>Widerstand<a class="headerlink" href="#resistor" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Widerstand ist ein elektronisches Element, das den Zweigstrom begrenzen kann. Der feste Widerstand bezieht sich auf den Widerstand, der nicht geändert werden kann, wenn das Potentiometer oder der variable Widerstand eingestellt werden kann.</p>
+<p>Die Widerstände in diesem Kit sind fest. In der Schaltung ist es wichtig, die angeschlossenen Komponenten zu schützen. Die folgenden Bilder zeigen einen echten 220Ω-Widerstand und zwei allgemein verwendete Schaltungssymbole für den Widerstand. Ω ist die Widerstandseinheit und die größere enthält KΩ, MΩ usw. Ihre Beziehung kann wie folgt gezeigt werden: 1 MΩ = 1000 KΩ, 1 KΩ = 1000 Ω, was 1 MΩ = 1000.000 Ω = 10 ^ 6 Ω bedeutet. Normalerweise ist der Widerstand darauf markiert. Wenn Sie diese Symbole in einer Schaltung sehen, steht sie für einen Widerstand.</p>
+<img alt="_images/image415.png" src="_images/image415.png" />
+<img alt="_images/image416.png" src="_images/image416.png" />
+<p>Der Widerstand kann direkt, im Farbcode und nach Zeichen markiert werden. Die in diesem Kit angebotenen Widerstände sind durch verschiedene Farben gekennzeichnet. Die Bänder am Widerstand geben nämlich den Widerstand an.</p>
+<p>Wenn wir einen Widerstand verwenden, müssen wir zuerst seinen Widerstand kennen. Es gibt zwei Methoden: Sie können das Frequenzband am Widerstand beobachten oder den Widerstand mit einem Multimeter messen. Es wird empfohlen, die erste Methode zu verwenden, da diese bequemer und schneller ist. Wenn Sie sich über den Wert nicht sicher sind, verwenden Sie das Multimeter.</p>
+<p>Wie auf der Karte gezeigt, steht jede Farbe für eine Zahl.</p>
+</section>
+<section id="capacitor">
+<h2>Kondensator<a class="headerlink" href="#capacitor" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image417.png" src="_images/image417.png" />
+<p>Ein Kondensator ist eine Komponente, die Energie in Form von elektrischer Ladung speichert oder eine Potentialdifferenz (statische Spannung) zwischen ihren Platten erzeugt, genau wie eine kleine wiederaufladbare Batterie.</p>
+<p>Standardkapazitätseinheiten</p>
+<p>Mikrofarad (μF) 1μF = 1/1,000,000 = 0.000001 = <span class="math notranslate nohighlight">\(10^{- 6}\)</span> F</p>
+<p>Nanofarad (nF) 1nF = 1/1,000,000,000 = 0.000000001 = <span class="math notranslate nohighlight">\(10^{- 9}\)</span>F</p>
+<p>Picofarad (pF) 1pF = 1/1,000,000,000,000 = 0.000000000001 =
+<span class="math notranslate nohighlight">\(10^{- 12}\)</span>F</p>
+<p>Hier haben wir <strong>104 Kondensatoren (10 x 104PF)</strong> gezeigt. Genau wie beim Ring der Widerstände helfen die Zahlen auf den Kondensatoren beim Ablesen der Werte, sobald sie auf der Platine montiert sind. Die ersten beiden Ziffern stellen den Wert dar und die letzte Ziffer der Zahl bedeutet den Multiplikator. Somit repräsentiert 104 eine Potenz von 10 × 10 bis 4 (in pF) gleich 100 nF.</p>
+</section>
+<section id="transistor">
+<h2>Transistor<a class="headerlink" href="#transistor" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image418.png" src="_images/image418.png" />
+<p>Der Transistor ist ein Halbleiterbauelement, das Strom für Strom steuert. Es verstärkt schwaches Signal auf Signal mit größerer Amplitude und wird auch für berührungslose Schalter verwendet. Ein Transistor ist eine dreischichtige Struktur, die aus Halbleitern vom P-Typ und N-Typ besteht. Sie bilden die drei Regionen intern. Der dünnere Teil in der Mitte ist die Grundfläche, die anderen beiden sind entweder vom N-Typ oder vom P-Typ - der kleinere Bereich mit der Mehrheit der Träger ist der Emitterbereich und der andere ist der Kollektorbereich. Diese Zusammensetzung ermöglicht es dem Transistor, ein Verstärker zu sein.</p>
+<img alt="_images/image419.png" src="_images/image419.png" />
+<p>Aus diesen drei Regionen werden jeweils drei Pole erzeugt, nämlich Basis (b), Emitter (e) und Kollektor (c). Sie bilden zwei PN-Übergänge, nämlich den Emitterübergang und den Sammelübergang. Die Pfeilrichtung im Transistorschaltungssymbol gibt die Richtung des Emitterübergangs an. Basierend auf dem Halbleitertyp können Transistoren in zwei Gruppen unterteilt werden, die NPN- und die PNP-Gruppe. Aus der Abkürzung ist ersichtlich, dass der erstere aus zwei Halbleitern vom N-Typ und einem P-Typ besteht, während der letztere das Gegenteil ist Siehe die Abbildung unten.</p>
+<p>Wenn ein Signal mit hohem Pegel einen NPN-Transistor durchläuft, wird es erregt. Ein PNP benötigt jedoch ein Low-Level-Signal, um es zu verwalten.</p>
+</section>
+<section id="diode">
+<h2>Diode<a class="headerlink" href="#diode" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Eine Diode ist eine zweipolige Komponente in der Elektronik mit einem unidirektionalen Stromfluss. Es bietet einen geringen Widerstand in Richtung des Stromflusses und einen hohen Widerstand in der entgegengesetzten Richtung. Dioden werden meistens verwendet, um Schäden an Bauteilen zu vermeiden, insbesondere aufgrund elektromotorischer Kraft in Schaltkreisen, die normalerweise polarisiert sind.</p>
+<img alt="_images/image420.png" src="_images/image420.png" />
+<p>Die beiden Anschlüsse einer Diode sind polarisiert, wobei das positive Ende als Anode und das negative Ende als Kathode bezeichnet wird. Die Kathode besteht üblicherweise aus Silber oder hat ein Farbband. Die Steuerung der Stromflussrichtung ist eines der Hauptmerkmale von Dioden - der Strom in einer Diode fließt von Anode zu Kathode. Das Verhalten einer Diode ähnelt dem Verhalten eines Rückschlagventils. Eine der wichtigsten Eigenschaften einer Diode ist die nichtlineare Stromspannung. Wenn eine höhere Spannung an die Anode angeschlossen ist, fließt Strom von Anode zu Kathode, und der Prozess wird als Vorwärtsvorspannung bezeichnet. Wenn jedoch die höhere Spannung an die Kathode angeschlossen ist, leitet die Diode keine Elektrizität, und der Prozess wird als Sperrvorspannung bezeichnet.</p>
+</section>
+<section id="prototype-shield">
+<h2>Prototyp Schild<a class="headerlink" href="#prototype-shield" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image421.png" src="_images/image421.png" />
+<p>Mit dem Prototype Shield können Sie ganz einfach benutzerdefinierte Schaltkreise entwerfen. Sie können Teile im Prototyping-Bereich löten, um Ihr Projekt zu erstellen, oder es mit einem kleinen Steckbrett verwenden, um Schaltungsideen ohne Löten schnell zu testen. Es bietet zusätzliche Anschlüsse für alle Arduino-E / A-Pins und bietet Platz für die Montage durch Löcher und oberflächenmontierte integrierte Schaltkreise. Dies ist eine bequeme Möglichkeit, Ihre benutzerdefinierte Schaltung und Arduino zu einem einzigen Modul zu machen.</p>
+<p><strong>Spezifikationen</strong></p>
+<ul class="simple">
+<li><p>Es kann direkt auf das Sunfounder Mega2560-Board gelegt werden. Ein kleines Steckbrett wird mitgeliefert, das Sie für einige einfache Experimente verwenden können.</p></li>
+<li><p>Stellen Sie einen Footprint für SOP28 bereit.</p></li>
+<li><p>Es verfügt über zusätzliche Verbindungen für alle Arduino-E / A-Pins</p></li>
+<li><p>Wir bieten Ihnen ein Pin22-Pin53-Bondpad an, mit dem Sie das Bauteil direkt schweißen können.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.2_led.html" class="btn btn-neutral float-right" title="2.2 LED" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="part_2_component.html" class="btn btn-neutral float-left" title="Teil 2: Komponente" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

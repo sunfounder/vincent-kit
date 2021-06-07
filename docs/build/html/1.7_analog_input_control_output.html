@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.7 Analogeingang Steuerausgang &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="1.8 Serielles Lesen" href="1.8_serial_read.html" />
+    <link rel="prev" title="1.6 Steuerung des digitalen Eingangs" href="1.6_digital_input_control_output.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.1_arduino_ide.html">1.1 Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_digital_write.html">1.2 Digitales Schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_analog_write.html">1.3 Analoges Schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_digital_read.html">1.4 Digitales Lesen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_analog_read.html">1.5 Analog lesen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_digital_input_control_output.html">1.6 Steuerung des digitalen Eingangs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.7 Analogeingang Steuerausgang</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Überblick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required">Erforderliche Komponenten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit">Fritzing Circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram">Schematische Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-analysis">Code-Analyse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture">Phänomen Bild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.8_serial_read.html">1.8 Serielles Lesen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.9_digital_input_pull-up.html">1.9 Pull-up für Digitaleingänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.10_state_change_detection.html">1.10 Zustandsänderungserkennung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.11_interval.html">1.11 Intervall</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_1_basic.html">Teil 1: Grundlegend</a> &raquo;</li>
+        
+      <li>1.7 Analogeingang Steuerausgang</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/1.7_analog_input_control_output.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="analog-input-control-output">
+<h1>1.7 Analogeingang Steuerausgang<a class="headerlink" href="#analog-input-control-output" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2>Überblick<a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sie können ein E / A-System mithilfe eines analogen Ein- / Ausgabegeräts installieren. Beispielsweise können Sie ein Potentiometer, einen Fotowiderstand, einen Wasserstandssensor usw. verwenden, um die Helligkeit der LED, die Motordrehzahl und dergleichen zu steuern. In dieser Lektion werden Potentiometer und LED als Beispiele verwendet, um die Helligkeit der LED zu ändern, wenn sich das Potentiometer dreht.</p>
+</section>
+<section id="components-required">
+<h2>Erforderliche Komponenten<a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/list_1.7.png" src="_images/list_1.7.png" />
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Informationen zur Hardware finden Sie in Teil 2.</p>
+</div>
+<p><a class="reference internal" href="part_2_component.html#part-2-component"><span class="std std-ref">Teil 2: Komponente</span></a></p>
+</section>
+<section id="fritzing-circuit">
+<h2>Fritzing Circuit<a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion verwenden wir PWM-Pin 9, um die LED anzusteuern. Der analoge Pin (A0) dient zum Ablesen des Potentiometerwerts. Nach dem Hochladen des Codes werden Sie feststellen, dass sich die Helligkeit der LED ändert, wenn sich das Potentiometer dreht.</p>
+<img alt="_images/image50.png" src="_images/image50.png" />
+</section>
+<section id="schematic-diagram">
+<h2>Schematische Darstellung<a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image408.png" src="_images/image408.png" />
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link zu dieser Überschrift">¶</a></h2>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/ab85c832-b034-40fa-a231-ef54f461f898/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><p>Wenn die Codes auf die Mega2560-Karte hochgeladen werden, können Sie sehen, dass sich die Helligkeit der LED mit dem Drehen des Potentiometerknopfs ändert.</p>
+</section>
+<section id="code-analysis">
+<h2>Code-Analyse<a class="headerlink" href="#code-analysis" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Deklarieren Sie die Pins von LED und Button.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="kr">int</span> <span class="n">sensorPin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>
+<span class="kr">const</span> <span class="kr">int</span> <span class="n">ledPin</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Stellen Sie in setup () den Modus von ledPin auf OUTPUT ein.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Lesen Sie die Messwerte des Potentiometers in loop () ab.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sensorValue</span><span class="o">=</span><span class="nf">analogRead</span><span class="p">(</span><span class="n">sensorPin</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Ordnen Sie den Potentiometerwert dem LED-Helligkeitswert zu (0-1024 ist 0-255 zugeordnet).</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">brightness</span> <span class="o">=</span> <span class="nf">map</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1024</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Schreiben Sie den Helligkeitswert auf die LED.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">analogWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="n">brightness</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="phenomenon-picture">
+<h2>Phänomen Bild<a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image51.jpeg" src="_images/image51.jpeg" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="1.8_serial_read.html" class="btn btn-neutral float-right" title="1.8 Serielles Lesen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="1.6_digital_input_control_output.html" class="btn btn-neutral float-left" title="1.6 Steuerung des digitalen Eingangs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

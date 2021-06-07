@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.14 Schrittmotor &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.15 Taste" href="2.15_button.html" />
+    <link rel="prev" title="2.13 Motor" href="2.13_motor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1_acommon_component.html">2.1 Gemeinsame Komponente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_led.html">2.2 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_rgb_led.html">2.3 RGB-LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_led_bar_graph.html">2.4 LED-Balkendiagramm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_7-segment_display.html">2.5 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_74hc595.html">2.6 74HC595</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_4-digital_7-segment_display.html">2.7 4-digitale 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_led_matrix_module.html">2.8 LED-Matrixmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_i2c_lcd1602_module.html">2.9 I2C LCD1602-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10_active_buzzer.html">2.10 Aktiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.11_passive_buzzer.html">2.11 Passiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.12_servo.html">2.12 Servo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.13_motor.html">2.13 Motor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.14 Schrittmotor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Überblick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required">Erforderliche Komponenten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-introduction">Komponenteneinführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit">Fritzing Circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram">Schematische Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-analysis">Code-Analyse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture">Phänomen Bild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.15_button.html">2.15 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.16_slide_switch.html">2.16 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.17_tilt_switch.html">2.17 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.18_touch_switch_module.html">2.18 Berührungsschaltermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.19_keypad.html">2.19 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.20_ir_receiver_module.html">2.20 IR-Empfängermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.21_relay_module.html">2.21 Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22_potentiometer.html">2.22 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.23_joystick_module.html">2.23 Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.24_mpr121_module.html">2.24 MPR121-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.25_rotary_encoder_module.html">2.25 Drehgebermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.26_photoresistor.html">2.26 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.27_thermistor.html">2.27 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.28_sound_sensor_module.html">2.28 Schallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.29_water_sensor_module.html">2.29 Wassersensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.30_ir_obstacle_avoidance_sensor.html">2.30 IR-Hindernisvermeidungssensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.31_pir_module.html">2.31 PIR-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.32_dht11_module.html">2.32 DHT11-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.33_ultrasonic_module.html">2.33 Ultraschallmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.34_mpu6050_module.html">2.34 MPU6050-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.35_rfid-rc522_module.html">2.35 RFID-RC522-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_2_component.html">Teil 2: Komponente</a> &raquo;</li>
+        
+      <li>2.14 Schrittmotor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.14_stepper_motor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="stepper-motor">
+<h1>2.14 Schrittmotor<a class="headerlink" href="#stepper-motor" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2>Überblick<a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion lernen Sie den Schrittmotor kennen.</p>
+</section>
+<section id="components-required">
+<h2>Erforderliche Komponenten<a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/list_2.14.png" src="_images/list_2.14.png" />
+</section>
+<section id="component-introduction">
+<h2>Komponenteneinführung<a class="headerlink" href="#component-introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image144.png" src="_images/image144.png" />
+<p>Der Schrittmotor ist ein Steuermotor mit offenem Regelkreis, der das elektrische Impulssignal in eine Winkelverschiebung oder eine Linienverschiebung umwandelt. Es ist die Hauptausführungskomponente im modernen digitalen Programmsteuersystem. Wenn der Schritttreiber ein Impulssignal empfängt, treibt er den Schrittmotor an, um einen festen Winkel in eine festgelegte Richtung zu drehen. Die Drehung des Schrittantriebs bewegt sich allmählich in einem festen Winkel. Die Winkelverschiebung kann durch Ändern der Anzahl der Impulse gesteuert werden, um eine präzise Positionierung zu erreichen. Gleichzeitig können Drehzahl und Beschleunigung des Motors durch Einstellen der Pulsfrequenz gesteuert werden, um den Zweck der Drehzahlregelung zu erreichen.</p>
+<p>Es gibt zwei Arten von Steppern, Unipolare und Bipolare, und es ist sehr wichtig zu wissen, mit welchem Typ Sie arbeiten. In diesem Experiment verwenden wir einen unipolaren Stepper.</p>
+<p>Der Schrittmotor ist ein Vierphasenmotor, der eine Gleichstromversorgung mit Unipolarität verwendet. Solange Sie alle Phasenwicklungen des Motors durch eine geeignete Zeitfolge elektrifizieren, können Sie ihn Schritt für Schritt drehen lassen. Das schematische Diagramm eines vierphasigen reaktiven Schrittmotors:</p>
+<img alt="_images/image460.png" src="_images/image460.png" />
+<p>In der Abbildung befindet sich in der Mitte des Motors ein Rotor - ein zahnradförmiger Permanentmagnet. Um den Rotor herum sind 0 bis 5 Zähne. Dann weiter draußen gibt es 8 Magnetpole, wobei jeweils zwei gegenüberliegende durch Spulenwicklung verbunden sind. Sie bilden also vier Paare von A nach D, was als Phase bezeichnet wird. Es verfügt über vier Anschlusskabel, die mit den Schaltern SA, SB, SC und SD verbunden werden können. Daher sind die vier Phasen in der Schaltung parallel und die zwei Magnetpole in einer Phase sind in Reihe geschaltet.</p>
+<p><strong>So funktioniert ein 4-Phasen-Schrittmotor:</strong></p>
+<p>Wenn der Schalter SB eingeschaltet ist, sind die Schalter SA, SC und SD ausgeschaltet, und die B-Phasen-Magnetpole sind auf die Zähne 0 und 3 des Rotors ausgerichtet. Gleichzeitig erzeugen Zahn 1 und 4 versetzte Zähne mit C- und D-Phasenpolen. Zahn 2 und 5 erzeugen versetzte Zähne mit D- und A-Phasenpolen. Wenn der Schalter SC eingeschaltet ist, die Schalter SB, SA und SD ausgeschaltet sind, dreht sich der Rotor unter dem Magnetfeld der C-Phasenwicklung und dem zwischen Zahn 1 und 4. Dann richten sich Zahn 1 und 4 an den Magnetpolen der C-Phasenwicklung aus. Während Zahn 0 und 3 versetzte Zähne mit A- und B-Phasenpolen erzeugen, erzeugen Zahn 2 und 5 versetzte Zähne mit den Magnetpolen von A- und D-Phasenpolen. Die ähnliche Situation geht weiter und weiter. Schalten Sie die Phasen A, B, C und D nacheinander ein, und der Rotor dreht sich in der Reihenfolge A, B, C und D.</p>
+<p>Der von uns verwendete Stator des Schrittmotors hat 32 Magnetpole, sodass ein Kreis 32 Schritte benötigt. Die Abtriebswelle des Schrittmotors ist mit einem Untersetzungsgetriebe verbunden, und das Untersetzungsverhältnis beträgt 1/64. <strong>Daher erfordert die endgültige Abtriebswelle zum Drehen eines Kreises 32 * 64 = 2048 Schritte</strong>.</p>
+<p><strong>ULN2003</strong></p>
+<img alt="_images/image461.png" src="_images/image461.png" />
+</section>
+<section id="fritzing-circuit">
+<h2>Fritzing Circuit<a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Stromversorgungsmodul dient zur Stromversorgung des Schrittmotors. Schließen Sie die GND der Mega 2560-Platine und die GND der ULN2003 an die Kathode des Steckbretts an und verbinden Sie die VCC der ULN2003 mit dem 5-V-AUSGANG der Stromversorgung.</p>
+<p>Die Verkabelung von ULN2003 und Mega2560 ist wie folgt dargestellt:</p>
+<img alt="_images/image149.png" src="_images/image149.png" />
+</section>
+<section id="schematic-diagram">
+<h2>Schematische Darstellung<a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image462.png" src="_images/image462.png" />
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link zu dieser Überschrift">¶</a></h2>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/1ea1cc56-83ef-45c3-8140-2c7378ad8efa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><p>Nachdem Sie den Code auf die Mega2560-Karte hochgeladen haben, können Sie sehen, wie der Schrittmotor einen Kreis im Abstand von einer Sekunde dreht. Jeder Kreis benötigt 3,75 Sekunden.</p>
+</section>
+<section id="code-analysis">
+<h2>Code-Analyse<a class="headerlink" href="#code-analysis" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Durch Aufrufen der Bibliothek Stepper.h können Sie den Schrittmotor problemlos antreiben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Stepper.h&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p><strong>Bibliotheksfunktionen:</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">Stepper</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">pin1</span><span class="p">,</span> <span class="n">pin2</span><span class="p">,</span> <span class="n">pin3</span><span class="p">,</span> <span class="n">pin4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Erstellt eine neue Instanz der Stepper-Klasse, die einen bestimmten Schrittmotor darstellt, der an Ihr Arduino-Board angeschlossen ist.</p>
+<p><strong>Schritte</strong>: Die Anzahl der Schritte in einer Umdrehung Ihres Motors. Wenn Ihr Motor die Anzahl der Grad pro Schritt angibt, teilen Sie diese Zahl in 360, um die Anzahl der Schritte zu erhalten (z. B. 360 / 3.6 ergibt 100 Schritte). (int)</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Jeder Kreis des Schrittmotors benötigt 2048 Schritte.</p>
+</div>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">rpm</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Stellt die Motordrehzahl in Umdrehungen pro Minute ein. Diese Funktion lässt den Motor nicht drehen, sondern stellt nur die Geschwindigkeit ein, mit der er sich bewegt, wenn Sie step () aufrufen.</p>
+<p><strong>U / min</strong>: Die Geschwindigkeit, mit der sich der Motor in Umdrehungen pro Minute drehen soll - eine positive Zahl. (lange)</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Der hier verwendete Schrittmotor dreht höchstens 17 Kreise pro Minute.</p>
+</div>
+<p>Dreht den Motor um eine bestimmte Anzahl von Schritten mit einer Geschwindigkeit, die durch den letzten Aufruf von setSpeed () bestimmt wurde.</p>
+<p><strong>Diese Funktion blockiert</strong>: Das heißt, es wird gewartet, bis sich der Motor vollständig bewegt hat, um die Steuerung an die nächste Zeile in Ihrer Skizze weiterzuleiten. Wenn beispielsweise die Drehzahl auf 1 U / min eingestellt ist und Schritt (2048) an einem 2048-Schrittmotor aufgerufen wird, dauert der Betrieb dieser Funktion eine volle Minute. Halten Sie zur besseren Kontrolle die Geschwindigkeit hoch und gehen Sie bei jedem Aufruf von step () nur ein paar Schritte.</p>
+<p><strong>Schritte</strong>: Die Anzahl der Schritte zum Drehen des Motors - positiv zum Drehen in eine Richtung, negativ zum Drehen der anderen. (int)</p>
+</section>
+<section id="phenomenon-picture">
+<h2>Phänomen Bild<a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image151.jpeg" src="_images/image151.jpeg" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.15_button.html" class="btn btn-neutral float-right" title="2.15 Taste" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.13_motor.html" class="btn btn-neutral float-left" title="2.13 Motor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

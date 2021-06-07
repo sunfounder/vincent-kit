@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.8 LED-Matrixmodul &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.9 I2C LCD1602-Modul" href="2.9_i2c_lcd1602_module.html" />
+    <link rel="prev" title="2.7 4-digitale 7-Segment-Anzeige" href="2.7_4-digital_7-segment_display.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1_acommon_component.html">2.1 Gemeinsame Komponente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_led.html">2.2 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_rgb_led.html">2.3 RGB-LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_led_bar_graph.html">2.4 LED-Balkendiagramm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_7-segment_display.html">2.5 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_74hc595.html">2.6 74HC595</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_4-digital_7-segment_display.html">2.7 4-digitale 7-Segment-Anzeige</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.8 LED-Matrixmodul</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Überblick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required">Erforderliche Komponenten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-introduction">Komponenteneinführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#max7219">MAX7219</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit">Fritzing Circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram">Schematische Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-analysis">Code-Analyse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture">Phänomen Bild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_i2c_lcd1602_module.html">2.9 I2C LCD1602-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10_active_buzzer.html">2.10 Aktiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.11_passive_buzzer.html">2.11 Passiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.12_servo.html">2.12 Servo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.13_motor.html">2.13 Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.14_stepper_motor.html">2.14 Schrittmotor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.15_button.html">2.15 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.16_slide_switch.html">2.16 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.17_tilt_switch.html">2.17 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.18_touch_switch_module.html">2.18 Berührungsschaltermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.19_keypad.html">2.19 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.20_ir_receiver_module.html">2.20 IR-Empfängermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.21_relay_module.html">2.21 Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22_potentiometer.html">2.22 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.23_joystick_module.html">2.23 Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.24_mpr121_module.html">2.24 MPR121-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.25_rotary_encoder_module.html">2.25 Drehgebermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.26_photoresistor.html">2.26 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.27_thermistor.html">2.27 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.28_sound_sensor_module.html">2.28 Schallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.29_water_sensor_module.html">2.29 Wassersensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.30_ir_obstacle_avoidance_sensor.html">2.30 IR-Hindernisvermeidungssensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.31_pir_module.html">2.31 PIR-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.32_dht11_module.html">2.32 DHT11-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.33_ultrasonic_module.html">2.33 Ultraschallmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.34_mpu6050_module.html">2.34 MPU6050-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.35_rfid-rc522_module.html">2.35 RFID-RC522-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_2_component.html">Teil 2: Komponente</a> &raquo;</li>
+        
+      <li>2.8 LED-Matrixmodul</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.8_led_matrix_module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="led-matrix-module">
+<h1>2.8 LED-Matrixmodul<a class="headerlink" href="#led-matrix-module" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2>Überblick<a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion lernen Sie das LED-Matrixmodul kennen. Das LED-Matrix-Modul verwendet den MAX7219-Treiber, um die 8 x 8-LED-Matrix anzusteuern.</p>
+</section>
+<section id="components-required">
+<h2>Erforderliche Komponenten<a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/list_2.8.png" src="_images/list_2.8.png" />
+</section>
+<section id="component-introduction">
+<h2>Komponenteneinführung<a class="headerlink" href="#component-introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die 64 LEDs werden von 16 Ausgangspins des IC angesteuert. Die maximale Anzahl von LEDs, die gleichzeitig leuchten, beträgt tatsächlich acht. Die LEDs sind als 8 × 8-Satz von Zeilen und Spalten angeordnet. Der MAX7219 aktiviert also jede Spalte für einen sehr kurzen Zeitraum und steuert gleichzeitig auch jede Zeile. Wenn Sie also schnell durch die Spalten und Zeilen wechseln, bemerkt das menschliche Auge nur ein kontinuierliches Licht.</p>
+<img alt="_images/image442.png" src="_images/image442.png" />
+</section>
+<section id="max7219">
+<h2>MAX7219<a class="headerlink" href="#max7219" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Diese integrierten Schaltkreise von Maxim dienen zur Ansteuerung von 64 einzelnen LEDs oder bis zu 8 Ziffern von 7-Segment-Anzeigen. Der Treiber implementiert eine SPI-kompatible Slave-Schnittstelle, die von Arduino über nur 3 digitale Ausgangspins gesteuert werden kann.</p>
+</section>
+<section id="fritzing-circuit">
+<h2>Fritzing Circuit<a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Beispiel wird der VCC-Pin von MAX7219 an 5 V, GND an Masse, DIN an Digital-Pin 12, CS an Digital-Pin 10, CLK an Digital-Pin 11 angeschlossen.</p>
+<img alt="_images/image443.png" src="_images/image443.png" />
+</section>
+<section id="schematic-diagram">
+<h2>Schematische Darstellung<a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image444.png" src="_images/image444.png" />
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Codes verwenden die Bibliothek LedControl.h. Weitere Informationen finden Sie in <strong>Teil 4 - 4.1 Hinzufügen von Bibliotheken zum Hinzufügen in der Bibliothek zur Arduino IDE</strong>.</p>
+<p><a class="reference external" href="https://github.com/sunfounder/sunfounder_vincent_kit_for_arduino/tree/master/library">LedControl.h</a></p>
+<p><a class="reference internal" href="part_4_appendix.html#add-libraries"><span class="std std-ref">4.1 Bibliotheken hinzufügen</span></a></p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/189a15e4-a81f-43f2-8618-3d565901f285/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><p>Nach dem Hochladen des Codes leuchten die LEDs in der Reihenfolge der Spalten, Zeilen oder Punkte auf, oder Bilder erscheinen auf der LED-Matrix.</p>
+</section>
+<section id="code-analysis">
+<h2>Code-Analyse<a class="headerlink" href="#code-analysis" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Durch Aufrufen der Bibliothek LedControl.h können Sie die LED-Matrix problemlos verwenden.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;LedControl.h&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p><strong>Bibliotheksfunktionen:</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">LedControl</span><span class="p">(</span><span class="kr">int</span> <span class="n">dataPin</span><span class="p">,</span><span class="kr">int</span> <span class="n">clockPin</span><span class="p">,</span><span class="kr">int</span> <span class="n">csPin</span><span class="p">,</span><span class="kr">int</span> <span class="n">numDevices</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine Instanz vom Typ LedControl, über die wir mit den MAX7219-Geräten kommunizieren. Die Initialisierung eines LedControl erfordert 4 Argumente.</p>
+<p><strong>dataPin, clockPin, csPin</strong>: Die ersten drei Argumente sind die Pin-Nummern auf dem Arduino, die mit dem MAX7219 verbunden sind. Sie können einen beliebigen digitalen E / A-Pin am Arduino auswählen. Da jedoch einige Pins auch für die serielle Kommunikation verwendet oder mit LEDs verbunden werden, sollten Sie die Pins 0, 1 und 13 vermeiden..</p>
+<p><strong>numDevices</strong>: Das vierte Argument ist die Anzahl der kaskadierten MAX7219-Geräte, die Sie mit diesem LedControl verwenden. Die Bibliothek kann bis zu 8 Geräte aus einer einzigen LedControl-Variablen adressieren.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nf">shutdown</span><span class="p">(</span><span class="kr">int</span> <span class="n">addr</span><span class="p">,</span> <span class="kr">bool</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>addr</strong>: Die Adresse des zu steuernden Displays.</p>
+<p><strong>b</strong>: Wenn true, wechselt das Gerät in den Ausschaltmodus. Wenn falsches Gerät in den normalen Betrieb geht.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="n">setIntensity</span><span class="p">(</span><span class="kr">int</span> <span class="n">addr</span><span class="p">,</span> <span class="kr">int</span> <span class="n">intensity</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Mit dieser Methode können Sie die Helligkeit in 16 diskreten Schritten steuern. Bei größeren Werten wird die Anzeige bis maximal 15 heller.</p>
+<p><strong>addr</strong>: Die Adresse des zu steuernden Displays.</p>
+<p><strong>intensity</strong>: die Helligkeit des Displays. Es sind nur Werte zwischen 0 (am dunkelsten) und 15 (am hellsten) gültig.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="n">clearDisplay</span><span class="p">(</span><span class="kr">int</span> <span class="n">addr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alle LEDs aus nach diesem.</p>
+<p><strong>addr</strong>: Die Adresse des zu steuernden Displays.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="n">setLed</span><span class="p">(</span><span class="kr">int</span> <span class="n">addr</span><span class="p">,</span> <span class="kr">int</span> <span class="n">row</span><span class="p">,</span> <span class="kr">int</span> <span class="n">col</span><span class="p">,</span> <span class="kr">boolean</span> <span class="n">state</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Stellen Sie den Status einer einzelnen LED ein.</p>
+<p><strong>addr</strong>: Die Adresse des zu steuernden Displays.</p>
+<p><strong>row</strong>: Die Zeile der LED (0..7).</p>
+<p><strong>col</strong>: Die Spalte der LED (0..7).</p>
+<p><strong>state</strong>: Wenn true, ist die LED eingeschaltet, wenn false, ist sie ausgeschaltet.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="n">setRow</span><span class="p">(</span><span class="kr">int</span> <span class="n">addr</span><span class="p">,</span> <span class="kr">int</span> <span class="n">row</span><span class="p">,</span> <span class="kr">byte</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Stellen Sie alle 8 LEDs hintereinander auf einen neuen Status.</p>
+<p><strong>addr</strong>: Die Adresse des zu steuernden Displays.</p>
+<p><strong>row</strong>: Zeile, die gesetzt werden soll (0..7).</p>
+<p><strong>value</strong>: Jedes auf 1 gesetzte Bit leuchtet die entsprechende LED auf (z. B. leuchtet B01000000 die zweite auf).</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="n">setColumn</span><span class="p">(</span><span class="kr">int</span> <span class="n">addr</span><span class="p">,</span> <span class="kr">int</span> <span class="n">col</span><span class="p">,</span> <span class="kr">byte</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Stellen Sie alle 8 LEDs hintereinander auf einen neuen Status.</p>
+<p><strong>addr</strong>: Die Adresse des zu steuernden Displays.</p>
+<p><strong>col</strong>: Spalte, die gesetzt werden soll (0..7).</p>
+<p><strong>value</strong>: Jedes auf 1 gesetzte Bit leuchtet die entsprechende LED auf (z. B. leuchtet B01000000 die zweite auf).</p>
+</section>
+<section id="phenomenon-picture">
+<h2>Phänomen Bild<a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image109.jpeg" src="_images/image109.jpeg" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.9_i2c_lcd1602_module.html" class="btn btn-neutral float-right" title="2.9 I2C LCD1602-Modul" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.7_4-digital_7-segment_display.html" class="btn btn-neutral float-left" title="2.7 4-digitale 7-Segment-Anzeige" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.35 RFID-RC522-Modul &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Part 3 Example" href="part_3_example.html" />
+    <link rel="prev" title="2.34 MPU6050-Modul" href="2.34_mpu6050_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1_acommon_component.html">2.1 Gemeinsame Komponente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_led.html">2.2 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_rgb_led.html">2.3 RGB-LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_led_bar_graph.html">2.4 LED-Balkendiagramm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_7-segment_display.html">2.5 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_74hc595.html">2.6 74HC595</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_4-digital_7-segment_display.html">2.7 4-digitale 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_led_matrix_module.html">2.8 LED-Matrixmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_i2c_lcd1602_module.html">2.9 I2C LCD1602-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10_active_buzzer.html">2.10 Aktiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.11_passive_buzzer.html">2.11 Passiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.12_servo.html">2.12 Servo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.13_motor.html">2.13 Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.14_stepper_motor.html">2.14 Schrittmotor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.15_button.html">2.15 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.16_slide_switch.html">2.16 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.17_tilt_switch.html">2.17 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.18_touch_switch_module.html">2.18 Berührungsschaltermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.19_keypad.html">2.19 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.20_ir_receiver_module.html">2.20 IR-Empfängermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.21_relay_module.html">2.21 Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22_potentiometer.html">2.22 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.23_joystick_module.html">2.23 Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.24_mpr121_module.html">2.24 MPR121-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.25_rotary_encoder_module.html">2.25 Drehgebermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.26_photoresistor.html">2.26 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.27_thermistor.html">2.27 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.28_sound_sensor_module.html">2.28 Schallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.29_water_sensor_module.html">2.29 Wassersensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.30_ir_obstacle_avoidance_sensor.html">2.30 IR-Hindernisvermeidungssensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.31_pir_module.html">2.31 PIR-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.32_dht11_module.html">2.32 DHT11-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.33_ultrasonic_module.html">2.33 Ultraschallmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.34_mpu6050_module.html">2.34 MPU6050-Modul</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.35 RFID-RC522-Modul</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview"><strong>Überblick</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required"><strong>Erforderliche Komponenten</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-introduction"><strong>Komponenteneinführung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit"><strong>Fritzing Circuit</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram"><strong>Schematische Darstellung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code"><strong>Code</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-analysis"><strong>Code-Analyse</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture"><strong>Phänomen Bild</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_2_component.html">Teil 2: Komponente</a> &raquo;</li>
+        
+      <li>2.35 RFID-RC522-Modul</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.35_rfid-rc522_module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="rfid-rc522-module">
+<h1>2.35 RFID-RC522-Modul<a class="headerlink" href="#rfid-rc522-module" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2><strong>Überblick</strong><a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion lernen Sie, wie Sie das RFID-Modul verwenden. RFID ist eine Abkürzung für Radio Frequency Identification. Sein Arbeitsprinzip besteht darin, eine berührungslose Datenkommunikation zwischen dem Lesegerät und dem Etikett durchzuführen, um den Zweck der Identifizierung des Ziels zu erreichen. RFID hat ein breites Anwendungsspektrum. Die derzeit typischen Anwendungen sind Tierchips, Diebstahlsicherungen, Zugangskontrolle, Parkkontrolle, Automatisierung der Produktionskette und Materialmanagement.</p>
+</section>
+<section id="components-required">
+<h2><strong>Erforderliche Komponenten</strong><a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/Part_two_35.png" src="_images/Part_two_35.png" />
+</section>
+<section id="component-introduction">
+<h2><strong>Komponenteneinführung</strong><a class="headerlink" href="#component-introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Radio Frequency Identification (RFID) bezeichnet eine Technologie, bei der eine drahtlose Kommunikation zwischen einem Objekt (oder Tag) und einem Abfragegerät (oder Lesegerät) verwendet wird, um solche Objekte automatisch zu verfolgen und zu identifizieren. Die Tag-Übertragungsreichweite ist auf mehrere Meter vom Lesegerät begrenzt. Eine klare Sichtlinie zwischen Lesegerät und Etikett ist nicht unbedingt erforderlich.</p>
+<p>Die meisten Tags enthalten mindestens eine integrierte Schaltung (IC) und eine Antenne. Der Mikrochip speichert Informationen und ist für die Verwaltung der Hochfrequenzkommunikation mit dem Lesegerät verantwortlich. Passive Tags haben keine unabhängige Energiequelle und sind auf ein externes elektromagnetisches Signal angewiesen, das vom Lesegerät bereitgestellt wird, um ihren Betrieb zu betreiben. Aktive Tags enthalten eine unabhängige Energiequelle, z. B. eine Batterie. Somit können sie eine erhöhte Verarbeitung, Übertragungsfähigkeit und Reichweite aufweisen.</p>
+<p><strong>MFRC522</strong></p>
+<p>MF RC522 ist ein hochintegrierter Lese- und Schreibkartenchip für die kontaktlose 13,56-MHz-Kommunikation. Es wurde von der NXP Company auf den Markt gebracht und ist ein berührungsloser, kostengünstiger und kleiner Niederspannungs-Kartenchip, der die beste Wahl für intelligente Instrumente und tragbare Handgeräte darstellt.</p>
+<p>Der MF RC522 verwendet ein fortschrittliches Modulations- und Demodulationskonzept, das in allen Arten von passiven kontaktlosen Kommunikationsmethoden und -protokollen mit 13,56 MHz vollständig dargestellt wird. Darüber hinaus unterstützt es den schnellen CRYPTO1-Verschlüsselungsalgorithmus zur Überprüfung von MIFARE-Produkten.</p>
+<p>Der MFRC522 unterstützt auch die berührungslose Hochgeschwindigkeitskommunikation der MIFARE-Serie mit einer bidirektionalen Datenübertragungsrate von bis zu 424 kbit / s. Als neues Mitglied der hochintegrierten 13,56-MHz-Lesekartenserie ist der MF RC522 dem vorhandenen MF RC500 und MF RC530 sehr ähnlich, es gibt jedoch auch große Unterschiede.</p>
+<p>Es kommuniziert mit dem Host-Computer über die serielle Weise, die weniger Verkabelung benötigt. Sie können zwischen SPI-, I2C- und seriellem UART-Modus (ähnlich wie RS232) wählen, um die Verbindung zu reduzieren, Platz auf der Leiterplatte zu sparen (kleinere Größe) und Kosten zu senken.</p>
+</section>
+<section id="fritzing-circuit">
+<h2><strong>Fritzing Circuit</strong><a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Beispiel fügen wir die RFID in das Steckbrett ein. Lassen Sie die 3,3 V RFID an 3,3 V, GND an GND, RST an Pin 2, SDA an Pin 6, SCK an Pin 5, MOSI an Pin 4, MISO an Pin 3 und IRQ an Pin 7 anschließen.</p>
+<a class="reference internal image-reference" href="_images/image259.png"><img alt="_images/image259.png" class="align-center" src="_images/image259.png" style="width: 500px;" /></a>
+</section>
+<section id="schematic-diagram">
+<h2><strong>Schematische Darstellung</strong><a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image260.png"><img alt="_images/image260.png" class="align-center" src="_images/image260.png" style="width: 1.9625in; height: 1.825in;" /></a>
+</section>
+<section id="code">
+<h2><strong>Code</strong><a class="headerlink" href="#code" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Codes verwenden die <a class="reference external" href="https://github.com/sunfounder/sunfounder_vincent_kit_for_arduino/tree/master/library">Bibliothek rfid1.h</a>. Informationen zum Importieren der Bibliothek finden Sie in <cite>Teil 4 - 4.1 Hinzufügen von Bibliotheken</cite>.</p>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/81d293e2-aba5-4bc2-9c16-ddb45b6357a8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><p>Wenn Sie die Codes auf die Mega2560-Karte hochgeladen haben, können Sie Ihre RFID-Karte (geheimer Schlüssel) in die Nähe des RFID-Lesegeräts bringen. Das Modul liest die Karteninformationen und druckt sie dann auf dem seriellen Monitor aus.</p>
+</section>
+<section id="code-analysis">
+<h2><strong>Code-Analyse</strong><a class="headerlink" href="#code-analysis" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die Funktionen des Moduls sind in der Bibliothek rfid1.h enthalten.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;rfid1.h&gt;</span><span class="cp"></span>
+</pre></div>
+</div>
+<p><strong>Bibliotheksfunktionen:</strong></p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">RFID1</span>
+</pre></div>
+</div>
+<p>Erstellen Sie eine neue Instanz der Klasse rfid1, die ein bestimmtes RFID-Modul darstellt, das an Ihr Arduino angeschlossen ist.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nf">begin</span><span class="p">(</span><span class="n">IRQ_PIN</span><span class="p">,</span><span class="n">SCK_PIN</span><span class="p">,</span><span class="n">MOSI_PIN</span><span class="p">,</span><span class="n">MISO_PIN</span><span class="p">,</span><span class="n">SDA_PIN</span><span class="p">,</span><span class="n">RST_PIN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pin-Konfiguration.</p>
+<p>IRQ_PIN,SCK_PIN,MOSI_PIN,MISO_PIN: Die für die SPI-Kommunikation verwendeten Pins.</p>
+<p>SDA_PIN: Synchroner Datenadapter.</p>
+<p>RST_PIN: Die zum Zurücksetzen verwendeten Pins.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="n">init</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Initialisieren Sie die RFID.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">uchar</span> <span class="nf">request</span><span class="p">(</span><span class="n">uchar</span> <span class="n">reqMode</span><span class="p">,</span> <span class="n">uchar</span> <span class="o">*</span><span class="n">TagType</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Suchkarte und Lesekartentyp, und die Funktion gibt den aktuellen Lesestatus von RFID zurück und gibt MI_OK zurück, wenn dies erfolgreich ist.</p>
+<p>reqMode: Suchmethoden. PICC_REQIDL ist definiert als 0x26 Befehlsbits (Durchsuchen Sie die Karten, die sich nicht im Ruhemodus befinden, im Antennenbereich).</p>
+<p>*TagType: It is used to store card type, and its value can be 4byte
+(e.g. 0x0400).</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="kr">char</span> <span class="o">*</span> <span class="n">readCardType</span><span class="p">(</span><span class="n">uchar</span> <span class="o">*</span><span class="n">TagType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Diese Funktion decodiert die vierstellige Hexadezimalzahl von * tagType in den jeweiligen Kartentyp und gibt eine Zeichenfolge zurück. Bei Übergabe von 0x0400 wird „MFOne-S50“ zurückgegeben.</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">uchar</span> <span class="nf">anticoll</span><span class="p">(</span><span class="n">uchar</span> <span class="o">*</span><span class="n">serNum</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Verhindern Sie Konflikte und lesen Sie die Seriennummer der Karte. Die Funktion gibt den aktuellen Lesestatus von RFID zurück. Bei Erfolg wird MI_OK zurückgegeben.</p>
+<p>* serNum: Hiermit wird die Kartenseriennummer gespeichert und die 4-Byte-Kartenseriennummer zurückgegeben. Das 5. Byte ist ein erneutes Überprüfungsbyte (z. B. meine Magnetkarten-ID ist 5AE4C955).</p>
+</section>
+<section id="phenomenon-picture">
+<h2><strong>Phänomen Bild</strong><a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="2.35" class="align-center" src="_images/Part_two_35_Code_Analysis.png" />
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="part_3_example.html" class="btn btn-neutral float-right" title="Part 3 Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.34_mpu6050_module.html" class="btn btn-neutral float-left" title="2.34 MPU6050-Modul" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.5 Zugangskontrollsystem &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Teil 4: Anhang" href="part_4_appendix.html" />
+    <link rel="prev" title="3.4 Vermutungsnummer" href="3.4_Guess_Number.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_3_example.html">Part 3 Example</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3.1_Reversing_Aid.html">3.1 Umkehrhilfe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Pedestrian_Crossing_Button.html">3.2 Fußgängerüberwegstaste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Overheat_Monitor.html">3.3 Überhitzungsmonitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4_Guess_Number.html">3.4 Vermutungsnummer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.5 Zugangskontrollsystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview"><strong>Überblick</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required"><strong>Erforderliche Komponenten</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit"><strong>Fritzing Circuit</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram"><strong>Schematische Darstellung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-explanation"><strong>Beispiel Erklärung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture"><strong>Phänomen Bild</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_3_example.html">Part 3 Example</a> &raquo;</li>
+        
+      <li>3.5 Zugangskontrollsystem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/3.5_Access_Control_System.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="access-control-system">
+<h1>3.5 Zugangskontrollsystem<a class="headerlink" href="#access-control-system" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2><strong>Überblick</strong><a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Zugangskontrollsystem ist das System zur Steuerung des Eingangskanals, das auf Basis des traditionellen Türschlosses entwickelt wird. Das traditionelle mechanische Türschloss ist nur ein einfaches mechanisches Gerät, egal wie vernünftig das Strukturdesign ist, wie stark das Material ist, Menschen können es auf verschiedene Arten öffnen. Der Schlüssel zum Ein- und Ausgang (wie ein Bürogebäude, ein Hotelzimmer) ist umständlich. Wird der Schlüssel übersehen oder ersetzt, ist das Schloss durch den Schlüssel zu ersetzen. Um diese Probleme zu lösen, gibt es elektronische Magnetkartenschlösser und elektronische Code-Schlösser, die die Verwaltungsebene der Zugangskanäle bis zu einem gewissen Grad verbessert haben, und dann ist die Kanalverwaltung in das elektronische Zeitalter eingetreten.</p>
+</section>
+<section id="components-required">
+<h2><strong>Erforderliche Komponenten</strong><a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/Part_three_5.1.png" class="align-center" src="_images/Part_three_5.1.png" />
+<img alt="_images/Part_three_5.2.png" class="align-center" src="_images/Part_three_5.2.png" />
+</section>
+<section id="fritzing-circuit">
+<h2><strong>Fritzing Circuit</strong><a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Beispiel wird das Stromversorgungsmodul zum Versorgen des Steckbretts verwendet. Wir erhalten die GND der Mega 2560-Platine, die an die Kathodenschiene des Steckbretts angeschlossen ist, die GND von ULN2003 an die Kathodenschiene des Steckbretts, die VCC an den 5-V-Ausgang der Stromversorgung und den Schrittmotor an OUT1-OUT5 von ULN.</p>
+<img alt="_images/Part_three_5_Fritzing_Circuit.png" class="align-center" src="_images/Part_three_5_Fritzing_Circuit.png" />
+<img alt="_images/image287.png" class="align-center" src="_images/image287.png" />
+</section>
+<section id="schematic-diagram">
+<h2><strong>Schematische Darstellung</strong><a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/image288.png" class="align-center" src="_images/image288.png" />
+</section>
+<section id="example-explanation">
+<h2><strong>Beispiel Erklärung</strong><a class="headerlink" href="#example-explanation" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Workflow des Zugangskontrollsystems wird im Flussdiagramm angezeigt.</p>
+<p>Wenn keine autorisierte ID identifiziert wurde (die Variable „Genehmigt“ entspricht 0), führt das Gerät Funktionen zur ID-Identifizierung und Kennwortidentifizierung aus.</p>
+<p>Wenn die autorisierte ID identifiziert wird („Genehmigt“ entspricht 1), öffnet sich die Tür. Danach wird die Tür einige Sekunden später geschlossen und der identifizierte Status zurückgesetzt („Genehmigt“ entspricht 0).</p>
+<p>Zusätzlich zur zentralen Zugriffssteuerungsfunktion verwendet das Projekt auch LCD und aktiven Summer, um die Arbeit des Benutzerinteraktionssystems des Zugriffskontrollsystems abzuschließen.</p>
+<img alt="_images/Part_three_5_Example_Explanation.png" class="align-center" src="_images/Part_three_5_Example_Explanation.png" />
+</section>
+<section id="phenomenon-picture">
+<h2><strong>Phänomen Bild</strong><a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image290.jpeg"><img alt="3.05" class="align-center" src="_images/image290.jpeg" style="width: 7.28542in; height: 5.50139in;" /></a>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/f7f9dd83-3ede-453e-806b-7420b9f7b29e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0><p>&lt;/iframe&gt;</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="part_4_appendix.html" class="btn btn-neutral float-right" title="Teil 4: Anhang" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3.4_Guess_Number.html" class="btn btn-neutral float-left" title="3.4 Vermutungsnummer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

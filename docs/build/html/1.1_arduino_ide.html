@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1 Arduino IDE &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="1.2 Digitales Schreiben" href="1.2_digital_write.html" />
+    <link rel="prev" title="Teil 1: Grundlegend" href="part_1_basic.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1 Arduino IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Beschreibung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-arduino-ide">Installieren Sie die Arduino IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-installer-file">Für die Installationsdatei</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-zip-file">Für ZIP-Datei</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-the-arduino-software-ide">Öffnen Sie die Arduino Software (IDE)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_digital_write.html">1.2 Digitales Schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_analog_write.html">1.3 Analoges Schreiben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_digital_read.html">1.4 Digitales Lesen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_analog_read.html">1.5 Analog lesen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_digital_input_control_output.html">1.6 Steuerung des digitalen Eingangs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.7_analog_input_control_output.html">1.7 Analogeingang Steuerausgang</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.8_serial_read.html">1.8 Serielles Lesen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.9_digital_input_pull-up.html">1.9 Pull-up für Digitaleingänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.10_state_change_detection.html">1.10 Zustandsänderungserkennung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.11_interval.html">1.11 Intervall</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_1_basic.html">Teil 1: Grundlegend</a> &raquo;</li>
+        
+      <li>1.1 Arduino IDE</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/1.1_arduino_ide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="arduino-ide">
+<h1>1.1 Arduino IDE<a class="headerlink" href="#arduino-ide" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="description">
+<h2>Beschreibung<a class="headerlink" href="#description" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Arduino ist eine Open Source-Plattform mit einfacher Software und Hardware. Auch Anfänger können es in kurzer Zeit meistern. Es bietet eine integrierte Entwicklungsumgebung (IDE) für die Codekompilierung und ist mit mehreren Steuerkarten kompatibel. Daher können Sie die Arduino-IDE herunterladen, die Skizze (dh die Codedatei) auf das Entwicklungsboard einladen und dann verwandte experimentelle Phänomene anzeigen. Weitere Informationen finden Sie unter <a class="reference external" href="http://www.arduino.cc">http://www.arduino.cc</a>.</p>
+</section>
+<section id="install-arduino-ide">
+<h2>Installieren Sie die Arduino IDE<a class="headerlink" href="#install-arduino-ide" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Hier sind die Installationsschritte auf dem Windows-System.</p>
+<p>Weitere Systeme finden Sie unter: <strong>Install Arduinio IDE in different and FAQ.pdf</strong></p>
+<p><a href="#id1"><span class="problematic" id="id2">`Weitere Systeme finden Sie unter: Installieren Sie Arduinio IDE in different und FAQ.pdf&lt;https://github.com/sunfounder/sunfounder_vincent_kit_for_arduino/blob/master/docs/(EN)%20Install%20Arduino%20IDE%20in%20different%20and%20FAQ.pdf&gt;`_</span></a></p>
+<p>Der Code in diesem Kit basiert auf Arduino, daher müssen Sie zuerst IDE installieren. überspringen Sie es, wenn Sie dies getan haben. Gehen Sie nun zu <a class="reference external" href="http://www.arduino.cc">arduino.cc</a> und klicken Sie auf SOFTWARE -&gt; DOWNLOADs. überprüfen Sie auf der Seite die Softwareliste auf der rechten Seite.</p>
+<img alt="_images/image12.png" src="_images/image12.png" />
+<p>Suchen Sie das passende Betriebssystem für Ihr Betriebssystem und klicken Sie auf Herunterladen Es gibt zwei Versionen von Arduino für Windows: Installer oder ZIP-Datei. Es wird empfohlen, die erstere herunterzuladen.</p>
+</section>
+<section id="for-installer-file">
+<h2>Für die Installationsdatei<a class="headerlink" href="#for-installer-file" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong>Schritt 1:</strong> Suchen Sie die exe-Datei gerade heruntergeladene.</p>
+<img alt="_images/image13.png" src="_images/image13.png" />
+<p><strong>Schritt 2:</strong> Doppelklicken Sie auf die Datei und ein Fenster wird wie folgt geöffnet. Klicken Sie auf Ich stimme zu.</p>
+<img alt="_images/image14.png" src="_images/image14.png" />
+<p><strong>Schritt 3:</strong> Klicken Sie auf Weiter.</p>
+<img alt="_images/image15.png" src="_images/image15.png" />
+<p><strong>Schritt 4:</strong> Wählen Sie den zu installierenden Pfad aus. Standardmäßig ist es auf der C-Disk festgelegt. Sie können auf Durchsuchen klicken und andere Pfade auswählen. Klicken Sie OK. Klicken Sie dann auf Installieren.</p>
+<img alt="_images/image400.png" src="_images/image400.png" />
+<p><strong>Schritt 5:</strong> Gleichzeitig werden Sie aufgefordert, die erforderlichen Treiber zu installieren. Wählen Sie „Immer vertrauenswürdige Software von“ Arduino LLC „. Klicken Sie nach Abschluss der Installation auf <strong>Schließen</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Die neue IDE kann zu Fehlern führen, wenn Sie Code unter Windows XP kompilieren. Wenn Ihr Computer unter XP ausgeführt wird, wird empfohlen, Arduino 1.0.5 oder 1.0.6 zu installieren. Sie können auch Ihren Computer aktualisieren.</p>
+</div>
+</section>
+<section id="for-zip-file">
+<h2>Für ZIP-Datei<a class="headerlink" href="#for-zip-file" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn Sie die Zip-Datei bereits heruntergeladen haben, wird sie möglicherweise nicht erkannt, wenn Sie die MCU an den Computer anschließen. Dann müssen Sie den Treiber manuell installieren. Führen Sie die folgenden Schritte aus.</p>
+<p><strong>Schritt 1:</strong> Schließen Sie die Karte mit einem 5-V-USB-Kabel an den Computer an. Nach einer Weile wird eine Meldung angezeigt, dass die Installation fehlgeschlagen ist.</p>
+<p><strong>Schritt 2:</strong> Gehen Sie zum Geräte-Manager. Unter anderen Geräten wird Arduino Mega 2560 mit einem Ausrufezeichen angezeigt, was bedeutet, dass der Computer die Karte nicht erkannt hat.</p>
+<img alt="_images/image17.png" src="_images/image17.png" />
+<p><strong>Schritt 3:</strong> Klicken Sie mit der rechten Maustaste auf <strong>Arduino Mega 2560</strong> und wählen Sie <strong>Treibersoftware aktualisieren</strong>.</p>
+<img alt="_images/image18.png" src="_images/image18.png" />
+<p><strong>Schritt 4:</strong> Wählen Sie die zweite Option: <strong>Durchsuchen Sie meinen Computer für Treibersoftware</strong>.</p>
+<img alt="_images/image19.png" src="_images/image19.png" />
+<p><strong>Schritt 5:</strong> Dann öffnet sich ein Fenster. Klicken Sie auf <strong>Durchsuchen</strong>. Gehen Sie dann zu dem Ordner, in den Sie gerade die Datei extrahiert haben. Gehen Sie zum <strong>Treiberordner</strong> und klicken Sie auf <strong>OK</strong> -&gt; <strong>Weiter</strong>.</p>
+<img alt="_images/image20.png" src="_images/image20.png" />
+<p><strong>Schritt 6:</strong> Wählen Sie ‘Always trust software from “Arduino LLC” ‘und klicken Sie auf Installieren.</p>
+<img alt="_images/image21.png" src="_images/image21.png" />
+<p>Es kann eine Sekunde dauern. Anschließend werden Sie vom System aufgefordert, den Treiber erfolgreich zu installieren. So kann der Computer die Karte jetzt erkennen. Klicken Sie auf <strong>Schließen</strong>.</p>
+<img alt="_images/image22.png" src="_images/image22.png" />
+</section>
+<section id="open-the-arduino-software-ide">
+<h2>Öffnen Sie die Arduino Software (IDE)<a class="headerlink" href="#open-the-arduino-software-ide" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Doppelklicken Sie auf das Arduino-Symbol (arduino.exe), das durch den Installationsprozess erstellt wurde.</p>
+<img alt="_images/image24.png" src="_images/image24.png" />
+<p>Dann erscheint die Arduino IDE. Die Details der Software überprüfen.</p>
+<img alt="_images/image23.jpeg" src="_images/image23.jpeg" />
+<p>1. <strong>Verify</strong>: Compile your code. Any syntax problem will be prompted
+with errors.</p>
+<p>2. <strong>Upload</strong>: Upload the code to your board. When you click the button,
+the RX and TX LEDs on the board will flicker fast and won’t stop until
+the upload is done.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Neu</strong>: Erstellen Sie ein neues Codebearbeitungsfenster.</p></li>
+<li><p><strong>Öffnen</strong>: Öffnen Sie eine .ino-Skizze.</p></li>
+<li><p><strong>Speichern</strong>: Speichern Sie die Skizze.</p></li>
+</ol>
+<p>6. <strong>Serial Monitor</strong>: Click the button and a window will appear. It
+receives the data sent from your control board. It is very useful for
+debugging.</p>
+<p>7. <strong>File</strong>: Click the menu and a drop-down list will appear, including
+file creating, opening, saving, closing, some parameter configuring,
+etc.</p>
+<p>8. <strong>Edit</strong>: Click the menu. On the drop-down list, there are some
+editing operations like Cut, Copy, Paste, Find, and so on, with their
+corresponding shortcuts.</p>
+<p>9. <strong>Sketch</strong>: Includes operations like Verify, Upload, Add files, etc.
+More important function is Include Library – where you can add
+libraries.</p>
+<p>10. <strong>Tool</strong>: Includes some tools – the most frequently used Board (the
+board you use) and Port (the port your board is at). Every time you want
+to upload the code, you need to select or check them.</p>
+<p>11. <strong>Help</strong>: If you’re a beginner, you may check the options under the
+menu and get the help you need, including operations in IDE,
+introduction information, troubleshooting, code explanation, etc.</p>
+<p>12. In this message area, no matter when you compile or upload, the
+summary message will always appear.</p>
+<p>13. Detailed messages during compile and upload. For example, the file
+used lies in which path, the details of error prompts.</p>
+<p>14. <strong>Board and Port</strong>: Here you can preview the board and port selected
+for code upload. You can select them again by <strong>Tools</strong> -&gt; <strong>Board</strong> /
+<strong>Port</strong> if any is incorrect.</p>
+<ol class="arabic simple" start="15">
+<li><p>Der Bearbeitungsbereich der IDE. Hier können Sie Code schreiben.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="1.2_digital_write.html" class="btn btn-neutral float-right" title="1.2 Digitales Schreiben" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="part_1_basic.html" class="btn btn-neutral float-left" title="Teil 1: Grundlegend" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

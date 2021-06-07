@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.34 MPU6050-Modul &mdash; SunFounder Vincent Kit  Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://ezblock.cc/readDocFile/topHead.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://ezblock.cc/readDocFile/topHead.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.35 RFID-RC522-Modul" href="2.35_rfid-rc522_module.html" />
+    <link rel="prev" title="2.33 Ultraschallmodul" href="2.33_ultrasonic_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SunFounder Vincent Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="components_list.html">Liste der Komponenten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_1_basic.html">Teil 1: Grundlegend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="part_2_component.html">Teil 2: Komponente</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1_acommon_component.html">2.1 Gemeinsame Komponente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_led.html">2.2 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_rgb_led.html">2.3 RGB-LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_led_bar_graph.html">2.4 LED-Balkendiagramm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_7-segment_display.html">2.5 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_74hc595.html">2.6 74HC595</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_4-digital_7-segment_display.html">2.7 4-digitale 7-Segment-Anzeige</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_led_matrix_module.html">2.8 LED-Matrixmodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_i2c_lcd1602_module.html">2.9 I2C LCD1602-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10_active_buzzer.html">2.10 Aktiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.11_passive_buzzer.html">2.11 Passiver Summer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.12_servo.html">2.12 Servo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.13_motor.html">2.13 Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.14_stepper_motor.html">2.14 Schrittmotor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.15_button.html">2.15 Taste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.16_slide_switch.html">2.16 Schiebeschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.17_tilt_switch.html">2.17 Neigungsschalter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.18_touch_switch_module.html">2.18 Berührungsschaltermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.19_keypad.html">2.19 Tastatur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.20_ir_receiver_module.html">2.20 IR-Empfängermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.21_relay_module.html">2.21 Relaismodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.22_potentiometer.html">2.22 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.23_joystick_module.html">2.23 Joystick-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.24_mpr121_module.html">2.24 MPR121-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.25_rotary_encoder_module.html">2.25 Drehgebermodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.26_photoresistor.html">2.26 Fotowiderstand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.27_thermistor.html">2.27 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.28_sound_sensor_module.html">2.28 Schallsensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.29_water_sensor_module.html">2.29 Wassersensormodul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.30_ir_obstacle_avoidance_sensor.html">2.30 IR-Hindernisvermeidungssensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.31_pir_module.html">2.31 PIR-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.32_dht11_module.html">2.32 DHT11-Modul</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.33_ultrasonic_module.html">2.33 Ultraschallmodul</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.34 MPU6050-Modul</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview"><strong>Überblick</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-required"><strong>Erforderliche Komponenten</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-introduction"><strong>Komponenteneinführung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fritzing-circuit"><strong>Fritzing Circuit</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schematic-diagram"><strong>Schematische Darstellung</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code"><strong>Code</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-analysis"><strong>Code-Analyse</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon-picture"><strong>Phänomen Bild</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.35_rfid-rc522_module.html">2.35 RFID-RC522-Modul</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_3_example.html">Part 3 Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part_4_appendix.html">Teil 4: Anhang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SunFounder Vincent Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="part_2_component.html">Teil 2: Komponente</a> &raquo;</li>
+        
+      <li>2.34 MPU6050-Modul</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2.34_mpu6050_module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="mpu6050-module">
+<h1>2.34 MPU6050-Modul<a class="headerlink" href="#mpu6050-module" title="Link zu dieser Überschrift">¶</a></h1>
+<section id="overview">
+<h2><strong>Überblick</strong><a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Lektion lernen Sie, wie Sie MPU6050 verwenden. MPU-6050 ist ein 6-Achsen-Bewegungsverfolgungsgerät (kombiniertes 3-Achsen-Gyroskop, 3-Achsen-Beschleunigungsmesser). Es wird häufig für Augmented Reality und elektronische Bildstabilisierung (EIS: Elektronische Bildstabilisierung), optische Bildstabilisierung (OIS: Optische Bildstabilisierung) und die Gestenbenutzeroberfläche „Zero Touch“ verwendet.</p>
+</section>
+<section id="components-required">
+<h2><strong>Erforderliche Komponenten</strong><a class="headerlink" href="#components-required" title="Link zu dieser Überschrift">¶</a></h2>
+<img alt="_images/Part_two_34.png" src="_images/Part_two_34.png" />
+</section>
+<section id="component-introduction">
+<h2><strong>Komponenteneinführung</strong><a class="headerlink" href="#component-introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Seine drei Koordinatensysteme sind wie folgt definiert:</p>
+<a class="reference internal image-reference" href="_images/image250.png"><img alt="_images/image250.png" class="align-center" src="_images/image250.png" style="width: 150px;" /></a>
+<p>Legen Sie die MPU6050 flach auf den Tisch und stellen Sie sicher, dass das Gesicht mit dem Etikett nach oben zeigt und sich ein Punkt auf dieser Oberfläche in der oberen linken Ecke befindet. Dann ist die aufrechte Richtung nach oben die z-Achse des Chips. Die Richtung von links nach rechts wird als X-Achse angesehen. Dementsprechend ist die Richtung von hinten nach vorne als Y-Achse definiert.</p>
+<p><strong>Beschleunigung</strong></p>
+<img alt="EE0D5D95-15E0-4aaf-902B-7575C1F9E299" class="align-center" src="_images/image251.png" />
+<p>Das Arbeitsprinzip von Beschleunigungsmessern ist der piezoelektrische Effekt, dh die Fähigkeit bestimmter Materialien, elektrische Ladungen als Reaktion auf angelegte mechanische Beanspruchungen zu erzeugen.</p>
+<p>Stellen Sie sich hier eine quaderförmige Box vor, in der sich eine kleine Kugel befindet, wie im obigen Bild. Die Wände dieser Box bestehen aus piezoelektrischen Kristallen. Immer wenn Sie die Box kippen, muss sich der Ball aufgrund der Schwerkraft in Richtung der Neigung bewegen. Die Wand, mit der die Kugel kollidiert, erzeugt winzige piezoelektrische Ströme. Es gibt insgesamt drei Paare gegenüberliegender Wände in einem Quader. Jedes Paar entspricht einer Achse im 3D-Raum: X-, Y- und Z-Achse. Basierend auf dem von der piezoelektrischen Wand erzeugten Strom können wir die Neigungsrichtung und ihre Amplitude bestimmen.</p>
+<p>Wir können die MPU6050 verwenden, um ihre Beschleunigung auf jeder Koordinatenachse zu ermitteln (im stationären Desktop-Zustand beträgt die Beschleunigung der Z-Achse 1 Schwerkrafteinheit und die X- und Y-Achse 0). Wenn es gekippt ist oder sich in einem schwerelosen / übergewichtigen Zustand befindet, ändert sich der entsprechende Wert.</p>
+<p>Es gibt vier Arten von Messbereichen, die programmgesteuert ausgewählt werden können: +/- 2 g, +/- 4 g, +/- 8 g und +/- 16 g (standardmäßig +/- 2 g), die jeder Genauigkeit entsprechen. Die Werte reichen von -32768 bis 32767.</p>
+<p>Der Messwert des Beschleunigungsmessers wird in einen Beschleunigungswert umgewandelt, indem der Messwert vom Messbereich auf den Messbereich abgebildet wird.</p>
+<p><strong>Beschleunigung = (Rohdaten der Beschleunigungsmesserachse / 65536 * voller Beschleunigungsbereich) g</strong></p>
+<p>Nehmen Sie als Beispiel die X-Achse, wenn die Rohdaten der X-Achse des Beschleunigungsmessers 16384 sind und der Bereich als +/- 2 g ausgewählt ist:</p>
+<p><strong>Beschleunigung entlang der X-Achse = (16384/65536 * 4) g = 1 g</strong></p>
+<p><strong>Gyroscopes</strong></p>
+<p>Gyroskope arbeiten nach dem Prinzip der Coriolis-Beschleunigung. Stellen Sie sich vor, es gibt eine gabelartige Struktur, die sich ständig hin und her bewegt. Es wird mit piezoelektrischen Kristallen an Ort und Stelle gehalten. Immer wenn Sie versuchen, diese Anordnung zu kippen, erfahren die Kristalle eine Kraft in Neigungsrichtung. Dies wird durch die Trägheit der beweglichen Gabel verursacht. Die Kristalle erzeugen somit einen Strom, der mit dem piezoelektrischen Effekt übereinstimmt, und dieser Strom wird verstärkt.</p>
+<a class="reference internal image-reference" href="_images/image252.png"><img alt="陀螺仪" class="align-center" src="_images/image252.png" style="width: 8.64375in; height: 3.41319in;" /></a>
+<p>Das Gyroskop verfügt außerdem über vier Arten von Messbereichen: +/- 250, +/- 500, +/- 1000, +/- 2000 (standardmäßig +/- 250 Grad / s). Die Berechnungsmethode und die Beschleunigung sind grundsätzlich konsistent.</p>
+<p>Die Formel zum Umwandeln des Messwerts in die Winkelgeschwindigkeit lautet wie folgt:</p>
+<p><strong>Winkelgeschwindigkeit = (Rohdaten der Gyroskopachse / 65536 * Gyroskopbereich im vollen Maßstab) °/s</strong></p>
+<p>Die X-Achse, zum Beispiel die Rohdaten der X-Achse des Beschleunigungsmessers, ist 16384 und reicht von +/- 250 ° / s:</p>
+<p><strong>Winkelgeschwindigkeit entlang der X-Achse = (16384/65536 * 500) ° / s = 125 °/s</strong></p>
+</section>
+<section id="fritzing-circuit">
+<h2><strong>Fritzing Circuit</strong><a class="headerlink" href="#fritzing-circuit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Beispiel fahren wir MPU6050 mit IIC. Wir setzen MPU6050 in das Steckbrett ein. Verbinden Sie den VCC mit 5 V, GND mit GND, SCL mit Pin SCL 21 und SDA mit Pin SDA 20.</p>
+<a class="reference internal image-reference" href="_images/image253.png"><img alt="_images/image253.png" class="align-center" src="_images/image253.png" style="width: 500px;" /></a>
+</section>
+<section id="schematic-diagram">
+<h2><strong>Schematische Darstellung</strong><a class="headerlink" href="#schematic-diagram" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image254.png"><img alt="_images/image254.png" class="align-center" src="_images/image254.png" style="width: 3.15486in; height: 2.56597in;" /></a>
+</section>
+<section id="code">
+<h2><strong>Code</strong><a class="headerlink" href="#code" title="Link zu dieser Überschrift">¶</a></h2>
+<iframe src=https://create.arduino.cc/editor/sunfounder01/7bfae41b-b651-41c2-830b-f2d9ea70efe8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe><p>Nach dem Hochladen der Codes auf die Mega2560-Karte können Sie den seriellen Monitor öffnen, um die Schwerkraftbeschleunigung und Winkelgeschwindigkeit der MPU6050 in jede Richtung anzuzeigen.</p>
+</section>
+<section id="code-analysis">
+<h2><strong>Code-Analyse</strong><a class="headerlink" href="#code-analysis" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im stationären Desktop-Zustand beträgt die Beschleunigung der Z-Achse 1 Schwerkrafteinheit und die X- und Y-Achse 0.</p>
+<p>Vor Ihrer Verwendung müssen Sie das Modul kalibrieren. Die Methoden sind wie folgt:</p>
+<p>1.MPU6050 modules are placed horizontally on the desktop and then you can
+fix them with clamps or adhesive tape.</p>
+<p>2.Run the sample codes to get the RAW DATA of MPU6050 when it is static.</p>
+<p>3.Add compensation according to the readings when MPU6050 is static.</p>
+<p>Nehmen wir als Beispiel die MPU6050, und die Ergebnisse der Kompensation lauten wie folgt:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">AcX</span> <span class="o">/</span> <span class="mi">65536</span>  <span class="o">*</span> <span class="n">ACCELE_RANGE</span> <span class="o">-</span> <span class="mf">0.02</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">AcY</span> <span class="o">/</span> <span class="mi">65536</span>  <span class="o">*</span> <span class="n">ACCELE_RANGE</span> <span class="o">+</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">AcZ</span><span class="o">/</span><span class="mi">65536</span>  <span class="o">*</span> <span class="n">ACCELE_RANGE</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">GyX</span> <span class="o">/</span> <span class="mi">65536</span>  <span class="o">*</span> <span class="n">GYROSC_RANGE</span> <span class="o">+</span> <span class="mf">1.70</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">GyY</span><span class="o">/</span><span class="mi">65536</span>  <span class="o">*</span> <span class="n">GYROSC_RANGE</span> <span class="o">-</span> <span class="mf">1.70</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">GyZ</span><span class="o">/</span><span class="mi">65536</span><span class="o">*</span><span class="n">GYROSC_RANGE</span> <span class="o">+</span> <span class="mf">0.25</span><span class="p">);</span>
+</pre></div>
+</div>
+<img alt="_images/Part_two_34_Code_Analysis.png" class="align-center" src="_images/Part_two_34_Code_Analysis.png" />
+</section>
+<section id="phenomenon-picture">
+<h2><strong>Phänomen Bild</strong><a class="headerlink" href="#phenomenon-picture" title="Link zu dieser Überschrift">¶</a></h2>
+<a class="reference internal image-reference" href="_images/image257.jpeg"><img alt="2.34" class="align-center" src="_images/image257.jpeg" style="width: 7.35347in; height: 4.82778in;" /></a>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.35_rfid-rc522_module.html" class="btn btn-neutral float-right" title="2.35 RFID-RC522-Modul" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.33_ultrasonic_module.html" class="btn btn-neutral float-left" title="2.33 Ultraschallmodul" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, SunFounder
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
